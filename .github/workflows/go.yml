@@ -1,0 +1,37 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Go
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    env:
+      GOPRIVATE: github.com/s3ndd
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.19
+
+    - name: Download dependencies
+      run: go mod download
+
+    - name: Test
+      run: ./ci/test.sh
+
+    - name: Build
+      run: |
+          chmod a+x ./ci/*
+          ./ci/build.sh
+
+

@@ -1,0 +1,57 @@
+coffeeShop:
+  numberOfGreeters: 2
+  numberOfCashiers: 2
+  numberOfBaristas: 10
+  cashierQueueSize: 10
+  orderQueueSize: 100
+  ddd: 12.34
+  # Assume this coffee shop use the same grinder for all coffee types
+  # For further optimization, we can have different grinders for different coffee beans
+  grinders:
+    - tag: grinder1
+      gramsPerSecond: 15
+    - tag: grinder2
+      gramsPerSecond: 13
+    - tag: grinder3
+      gramsPerSecond: 12
+  # Assume this coffee shop use the same brewer for all coffee types
+  # For further optimization, we can have different brewers with different water temperature for different coffee types
+  brewers:
+    - tag: brewer1
+      ouncesWaterPerSecond: 4
+    - tag: brewer1
+      ouncesWaterPerSecond: 3
+  # Assume this coffee shop only provides hot coffee
+  # For iced coffee, the brewer would be replaced with an iced brewer
+  # the logic for the iced brewer would be similar to the brewer
+  # Assume all the coffee types use the same coffee beans and same roast, for example, all use medium arabica beans
+  # Assume all the coffee types do not add milk
+  # beansToWaterRatio is the ratio of coffee beans to water, for example, 0.18 means 18g of coffee beans to 100g of water
+  # Assume all the coffee type sizes are standard cup sizes.
+  # Larger sizes are made by adding 1.25 time the size of the standard size
+  # Extra sizes are made by adding 1.5 time the size of the standard size
+  coffeeTypes:
+    - name: Cappuccino
+      beansToWaterRatio: 0.18
+      price: 3.25
+      sizeInOunces: 8
+    - name: Americano
+      beansToWaterRatio: 0.14
+      price: 2.75
+      sizeInOunces: 10
+    - name: Flat White
+      beansToWaterRatio: 0.19
+      price: 3.75
+      sizeInOunces: 12
+    - name: Macchiato
+      beansToWaterRatio: 0.22
+      price: 2.75
+      sizeInOunces: 6
+    - name: Latte
+      beansToWaterRatio: 0.16
+      price: 3.50
+      sizeInOunces: 12
+
+
+
+
