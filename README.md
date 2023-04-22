@@ -1,4 +1,6 @@
 # CoffeeShop
+*Email*: `sheldonshidev@gmail.com` *Name*:`Sheldon Shi`
+
 CoffeeShop is a simulation of a coffee shop operation, demonstrating the use of concurrency patterns and data structures in Golang. The coffee shop has greeters, cashiers, baristas, grinders, and brewers working together to serve customers efficiently.
 
 ## Design
